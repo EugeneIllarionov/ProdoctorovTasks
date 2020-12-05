@@ -1,6 +1,5 @@
 import json
 import sys
-import time
 import timeit
 from jsonschema import validate, ValidationError
 from datetime import datetime

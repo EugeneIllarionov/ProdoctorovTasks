@@ -1,5 +1,3 @@
 requests
-timeit
 pathlib
 jsonschema
-json
