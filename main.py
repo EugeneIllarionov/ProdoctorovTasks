@@ -122,8 +122,8 @@ class Program:
         if file.exists():
             created_time = file.stat().st_mtime
             created_datetime = datetime.fromtimestamp(created_time).strftime("%Y-%m-%dT%H-%M")
-            old_file_name = fr'{file.parent}\old_{file.stem}_{created_datetime}.txt'
-            if not Path(old_file_name).exists():
+            old_file_name = file.parent / f'old_{file.stem}_{created_datetime}.txt'
+            if not old_file_name.exists():
                 file.rename(old_file_name)
                 return old_file_name
 
